@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista Previa de Lección</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+   <header>
+  <h2 id="lesson-title">Evaluación</h2>
+  <button id="close-preview">Cerrar</button>
+</header>
+
+<main>
+  <div id="progress-bar">
+    <span id="progress-text">Pregunta 1 de 1</span>
+  </div>
+
+  <div id="lesson-content"></div>
+
+  <div id="nav-toolbar">
+    <button id="btn-prev">Anterior</button>
+    <button id="btn-check">Comprobar</button>
+    <button id="btn-next">Siguiente</button>
+    <button id="btn-submit">Enviar evaluación</button>
+    <button id="btn-restart">Reiniciar</button>
+  </div>
+
+  <div id="result-summary" style="display:none;"></div>
+</main>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="/js/firebase-config.js"></script>
+    <script src="/js/lesson-preview.js"></script>
+</body>
+</html>

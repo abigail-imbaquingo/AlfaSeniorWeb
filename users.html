@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlfaSenior - Usuarios</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>AlfaSenior</h1>
+        <div class="user-info">
+            <span id="admin-name">Administrador</span>
+            <button id="logout-btn" class="btn">Cerrar sesión</button>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="lessons.html">Lecciones</a></li>
+                <li><a href="users.html" class="active">Usuarios</a></li>
+                <li><a href="stats.html">Estadísticas</a></li>
+                <li><a href="admins.html">Administradores</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <div class="card">
+            <h2>Gestión de Usuarios</h2>
+
+            <div class="search-filter">
+                <input type="text" id="search-users" placeholder="Buscar usuario...">
+                <select id="filter-level">
+                    <option value="all">Todos los niveles</option>
+                    <option value="1">Nivel 1</option>
+                    <option value="2">Nivel 2</option>
+                    <option value="3">Nivel 3</option>
+                    <option value="4">Nivel 4</option>
+                    <option value="5">Nivel 5</option>
+                    <option value="6">Nivel 6</option>
+                    <option value="7">Nivel 7</option>
+                </select>
+            </div>
+
+            <table class="users-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Nivel</th>
+                        <th>Progreso</th>
+                        <th>Última actividad</th>
+                    </tr>
+                </thead>
+                <tbody id="users-table-body">
+                    <!-- Los usuarios se cargarán aquí -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="/js/firebase-config.js"></script>
+    <script src="/js/users.js"></script>
+</body>
+
+</html>

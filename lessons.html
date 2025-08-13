@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlfaSenior - Evaluación Sumativa</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>AlfaSenior</h1>
+        <div class="user-info">
+            <span id="admin-name">Administrador</span>
+            <button id="logout-btn" class="btn">Cerrar sesión</button>
+        </div>
+    </div>
+    <div class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="lessons.html" class="active">Evaluación Sumativa</a></li>
+                <li><a href="users.html">Usuarios</a></li>
+                <li><a href="stats.html">Estadísticas</a></li>
+                <li><a href="admins.html">Administradores</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <div class="card">
+            <h2>Gestión de Evaluación Sumativa</h2>
+            <div id="lessons-container">
+                <!-- La evaluación sumativa se cargará aquí -->
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="/js/firebase-config.js"></script>
+    <script src="/js/lessons.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlfaSenior - Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>AlfaSenior</h1>
+        <div class="user-info">
+            <span id="admin-name">Administrador</span>
+            <button id="logout-btn" class="btn">Cerrar sesión</button>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="lessons.html">Lecciones</a></li>
+                <li><a href="users.html">Usuarios</a></li>
+                <li><a href="stats.html">Estadísticas</a></li>
+                <li><a href="admins.html">Administradores</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <div class="card">
+            <h2>Resumen General</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Usuarios Activos</h3>
+                    <p id="active-users">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Lecciones Completadas</h3>
+                    <p id="completed-lessons">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Progreso Promedio</h3>
+                    <p id="avg-progress">0%</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Juegos Completados</h3>
+                    <p id="completed-games">0</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Actividad Reciente</h2>
+            <div id="recent-activity" class="activity-list">
+                <!-- Actividad se cargará aquí -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="/js/firebase-config.js"></script>
+    <script src="/js/dashboard.js"></script>
+</body>
+
+</html>

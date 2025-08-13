@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlfaSenior - Administradores</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="header">
+    <h1>AlfaSenior</h1>
+    <div class="user-info">
+      <span id="admin-name">Administrador</span>
+      <button id="logout-btn" class="btn">Cerrar sesión</button>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="lessons.html">Lecciones</a></li>
+        <li><a href="users.html">Usuarios</a></li>
+        <li><a href="stats.html">Estadísticas</a></li>
+        <li><a href="admins.html" class="active">Administradores</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="main-content">
+    <div class="card">
+      <div class="card-header">
+        <h2>Gestión de Administradores</h2>
+        <button id="show-form-btn" class="btn">+ Nuevo Administrador</button>
+      </div>
+
+      <!-- Formulario oculto inicialmente -->
+      <div id="admin-form-container" style="display: none;">
+        <div class="add-admin-form">
+          <form id="add-admin-form">
+            <div class="form-group">
+              <label for="admin-email">Correo Electrónico</label>
+              <input type="email" id="admin-email" required>
+            </div>
+            <div class="form-group">
+              <label for="admin-name-input">Nombre Completo</label>
+              <input type="text" id="admin-name-input" required>
+            </div>
+            <div class="form-group">
+              <label for="admin-password">Contraseña</label>
+              <div class="password-container">
+                <input type="password" id="admin-password" minlength="6">
+                <i class="fas fa-eye toggle-password"></i>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="admin-password-confirm">Confirmar Contraseña</label>
+              <div class="password-container">
+                <input type="password" id="admin-password-confirm" minlength="6">
+                <i class="fas fa-eye toggle-password"></i>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn" id="submit-admin-btn">Agregar Administrador</button>
+              <button type="button" class="btn btn-secondary" id="cancel-edit-btn">Cancelar</button>
+              <button type="button" class="btn btn-warning" id="reset-password-btn">Resetear Contraseña</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="admin-message" class="message"></div>
+      <div class="admin-list">
+        <h3>Administradores Registrados</h3>
+        <table class="users-table">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Correo</th>
+              <th>Fecha de Registro</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="admins-table-body">
+            <!-- Los administradores se cargarán aquí -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="/js/firebase-config.js"></script>
+  <script src="/js/admins.js"></script>
+</body>
+</html>
