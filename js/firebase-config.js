@@ -1,12 +1,12 @@
 // Configuración de Firebase (reemplaza con tus datos reales)
 const firebaseConfig = {
-  apiKey: "AIzaSyBSAfT9VpHqhWxOGC1zFscEGxsdPNnpk7M",
-  authDomain: "alfaseniorweb.firebaseapp.com",
-  databaseURL: "https://alfaseniorweb-default-rtdb.firebaseio.com/",
+  apiKey: "TU-API-KEY",
+  authDomain: "TU-AUTH-DOMAIN",
+  databaseURL: "https:TU-DATABASE-URL",
   projectId: "alfaseniorweb",
-  storageBucket: "alfaseniorweb.firebasestorage.app",
-  messagingSenderId: "525547541495",
-  appId: "1:525547541495:web:2524997b3316ce537094f2"
+  storageBucket: "TU-STORAGE-BUCKET",
+  messagingSenderId: "TU-MESSAGING",
+  appId: "TU-APP-ID"
 };
 
 // Inicializar Firebase
